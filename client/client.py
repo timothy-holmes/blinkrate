@@ -11,7 +11,7 @@ config = {
 }
 
 # Define constants
-FPS = config.get('FPS', 30)
+FPS = int(config.get('FPS', 30))
 SERVER_URL = f"http://{config.get('SERVER_IP','hh.home')}:{config.get('SERVER_PORT',8008)}/process_frame"
 
 # Initialize camera
