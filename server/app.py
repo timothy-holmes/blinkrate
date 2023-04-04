@@ -34,7 +34,9 @@ def process_frame():
 
 @app.route('/blink_rate')
 def blink_rate_report():
-    return jsonify({'blinks': blinks, 'frames': frames})
+    blinks_str = {f'{k[0]}:{k[1]}': v for k,v in blinks.items()}
+    frames_str = {f'{k[0]}:{k[1]}': v for k,v in frames.items()}
+    return jsonify({'blinks': blinks_str, 'frames': frames_str})
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
