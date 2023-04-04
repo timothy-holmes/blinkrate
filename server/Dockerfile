@@ -13,6 +13,7 @@ COPY requirements.txt .
 # Install any needed packages specified in requirements.txt
 RUN pip install -U pip wheel cmake
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install gunicorn
 
 # Copy the current directory contents into the container at /app
 COPY . /app
