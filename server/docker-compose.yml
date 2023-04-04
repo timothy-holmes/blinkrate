@@ -1,0 +1,9 @@
+version: '3'
+services:
+  blink:
+    env_file:
+      - ../.env.prod
+    build: .
+    ports:
+      - "$SERVER_IP:$SERVER_PORT:$SERVER_PORT"
+    command: ["gunicorn", "-b", "$SERVER_IP:$SERVER_PORT", "app:app"]
