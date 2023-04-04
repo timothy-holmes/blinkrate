@@ -1,5 +1,5 @@
 dlib==19.24.1
 Flask==2.2.3
 numpy==1.23.0
-opencv_python==4.7.0.72
+opencv-python-headless
 gunicorn
