@@ -1,5 +1,8 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim-buster
+FROM python:latest
+
+RUN apt-get update -y && \
+    apt-get install build-essential cmake pkg-config -y
 
 # Set the working directory to /app
 WORKDIR /app
