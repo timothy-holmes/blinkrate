@@ -34,8 +34,7 @@ while True:
 
         # If server returns a response, print blink rate to console
         if response.status_code == 200:
-            blink_rate = float(response.content.decode("utf-8"))
-            print(f"Blink rate: {blink_rate:.2f} blinks per minute")
+            pass
 
     # Wait for next frame
     time.sleep(1 / FPS)

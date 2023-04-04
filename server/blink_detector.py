@@ -45,7 +45,7 @@ class BlinkDetector:
 
     def extract_eye(self, landmarks, start_index, end_index):
         # Extract eye landmarks from full set of facial landmarks
-        eye_landmarks = landmarks[start_index:end_index]
+        eye_landmarks = [landmarks.part(idx=i) for i in range(start_index, end_index)]
 
         # Convert eye landmarks to numpy array
         eye_landmarks = np.array([(p.x, p.y) for p in eye_landmarks])
