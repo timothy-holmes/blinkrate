@@ -6,7 +6,8 @@ RUN apt-get update -y && \
     apt-get install build-essential cmake pkg-config -y
 
 # tools required for cv2
-RUN apt-get install -y libsm6 libxext6 libxrender-dev
+RUN apt-get install libsm6 libxext6 libxrender-dev -y
+RUN apt-get libxext6  -y
 
 # Set the working directory to /app
 WORKDIR /app
