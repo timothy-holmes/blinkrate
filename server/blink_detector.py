@@ -25,8 +25,8 @@ class BlinkDetector:
         for rect in rects:
             # Extract region of interest (ROI) containing eyes
             landmarks = self.predictor(gray, rect)
-            left_eye = self.extract_eye(landmarks, 36, 41)
-            right_eye = self.extract_eye(landmarks, 42, 47)
+            left_eye = self.extract_eye(landmarks, 36, 42)
+            right_eye = self.extract_eye(landmarks, 42, 48)
 
             # Calculate eye aspect ratio (EAR)
             left_eye_ratio = self.eye_aspect_ratio(left_eye)
